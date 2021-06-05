@@ -8,6 +8,8 @@
 #include "BankingProjectDlg.h"
 #include "afxdialogex.h"
 
+#include "BankingDefine.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -101,8 +103,9 @@ BOOL CBankingProjectDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 	
 	// TODO: Add extra initialization here
-	m_btTest.MoveWindow(10, 100, 200, 100);
-
+	
+	//Set Layout when start App
+	LayoutControl();
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -154,5 +157,13 @@ void CBankingProjectDlg::OnPaint()
 HCURSOR CBankingProjectDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
+}
+
+void CBankingProjectDlg::LayoutControl()
+{
+	CRect rect;
+	GetClientRect(&rect);
+	MoveWindow(rect.left, rect.top, WIDTH_APP, HEIGHT_APP);
+	m_btTest.MoveWindow(X_BUT_TEST, Y_BUT_TEST, WIDTH_BUT_TEST, HEIGHT_BUT_TEST);
 }
 

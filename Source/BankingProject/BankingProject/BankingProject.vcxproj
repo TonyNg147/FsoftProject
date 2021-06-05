@@ -183,6 +183,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BankingDefine.h" />
     <ClInclude Include="BankingProject.h" />
     <ClInclude Include="BankingProjectDlg.h" />
     <ClInclude Include="framework.h" />
