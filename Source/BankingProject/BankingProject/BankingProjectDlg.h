@@ -34,4 +34,7 @@ protected:
 
 private:
 	CButton m_btTest;
+
+public:
+	void LayoutControl();
 };
