@@ -59,6 +59,7 @@ CBankingProjectDlg::CBankingProjectDlg(CWnd* pParent /*=nullptr*/)
 void CBankingProjectDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_BUTTON_TEST, m_btTest);
 }
 
 BEGIN_MESSAGE_MAP(CBankingProjectDlg, CDialogEx)
@@ -98,8 +99,10 @@ BOOL CBankingProjectDlg::OnInitDialog()
 	//  when the application's main window is not a dialog
 	SetIcon(m_hIcon, TRUE);			// Set big icon
 	SetIcon(m_hIcon, FALSE);		// Set small icon
-
+	
 	// TODO: Add extra initialization here
+	m_btTest.MoveWindow(10, 100, 200, 100);
+
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
