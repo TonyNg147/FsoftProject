@@ -36,6 +36,9 @@
     <ClInclude Include="BankingDefine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CWaitingMsgDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BankingProject.cpp">
@@ -45,6 +48,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CWaitingMsgDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
