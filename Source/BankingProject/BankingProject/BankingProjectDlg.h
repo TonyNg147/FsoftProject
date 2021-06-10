@@ -3,6 +3,7 @@
 //
 
 #pragma once
+#include "CWaitingMsgDialog.h"
 
 
 // CBankingProjectDlg dialog
@@ -34,7 +35,10 @@ protected:
 
 private:
 	CButton m_btTest;
+	CMenu m_menu;
 
 public:
 	void LayoutControl();
+	CWaitingMsgDialog m_waitingMsgDlg;
+	afx_msg void OnPhulh1Waitingscr();
 };
