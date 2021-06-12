@@ -37,4 +37,11 @@ private:
 
 public:
 	void LayoutControl();
+	CStatic m_ChooseMoney;
+	CButton m_FiveMillions;
+	CButton m_ThreeMillions;
+	CButton m_FiveHundreds;
+	CButton m_TwoMillions;
+	CButton m_OneMillion;
+	CButton m_Another;
 };

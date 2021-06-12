@@ -8,6 +8,7 @@
 #include "BankingProjectDlg.h"
 #include "afxdialogex.h"
 
+
 #include "BankingDefine.h"
 
 #ifdef _DEBUG
@@ -62,6 +63,13 @@ void CBankingProjectDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_BUTTON_TEST, m_btTest);
+	DDX_Control(pDX, IDC_VALUE1, m_ChooseMoney);
+	DDX_Control(pDX, IDC_VALUE_2, m_FiveMillions);
+	DDX_Control(pDX, IDC_VALUE_3, m_ThreeMillions);
+	DDX_Control(pDX, IDC_VALUE_4, m_FiveHundreds);
+	DDX_Control(pDX, IDC_VALUE_5, m_TwoMillions);
+	DDX_Control(pDX, IDC_VALUE_6, m_OneMillion);
+	DDX_Control(pDX, IDC_VALUE_7, m_Another);
 }
 
 BEGIN_MESSAGE_MAP(CBankingProjectDlg, CDialogEx)
