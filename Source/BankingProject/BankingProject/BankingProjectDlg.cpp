@@ -9,7 +9,13 @@
 #include "afxdialogex.h"
 
 #include "BankingDefine.h"
-
+/*
+SangTH5 include
+*/
+#include "CBalanceHomeDlg.h"
+/*
+end SangTH5 include
+*/
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -76,6 +82,13 @@ BEGIN_MESSAGE_MAP(CBankingProjectDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_QUERYDRAGICON()
 	ON_COMMAND(ID_PHULH1_WAITINGSCR, &CBankingProjectDlg::OnPhulh1Waitingscr)
+	/*
+	*   SangTH5 edit 10/06
+	*/
+	ON_COMMAND(ID_SANGTH5_BALANCEDLG, &CBankingProjectDlg::OnSangth5Balancedlg)
+	/*
+	*   end SangTH5 edit 10/06
+	*/
 END_MESSAGE_MAP()
 
 
@@ -123,10 +136,18 @@ BOOL CBankingProjectDlg::OnInitDialog()
 	m_waitingMsgDlg.Create(IDD_DIALOG_MSG_WAITING, this);
 
 	m_menu.LoadMenuW(IDR_MENU_MAIN);
-
+	
 	SetMenu(&m_menu);
 	/*
 		End PhuLH1: 10.06
+	*/
+
+	/*
+		 SangTH5 edit test menu
+	*/
+	//m_menu.LoadMenuW(IDR_MENU_SANGTH5);
+	/*
+		 end SangTH5 edit test menu
 	*/
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
@@ -220,4 +241,17 @@ void CBankingProjectDlg::OnPhulh1Waitingscr()
 }
 /*
 	End PhuLH1: 10.06
+*/
+
+/*
+	SangTH5 edit
+*/
+void CBankingProjectDlg::OnSangth5Balancedlg()
+{
+	// TODO: Add your command handler code here
+	CBalanceHomeDlg balanceDlg;
+	balanceDlg.DoModal();
+}
+/*
+	end SangTH5 edit
 */
