@@ -186,6 +186,8 @@
     <ClInclude Include="BankingDefine.h" />
     <ClInclude Include="BankingProject.h" />
     <ClInclude Include="BankingProjectDlg.h" />
+    <ClInclude Include="CBalanceDetail.h" />
+    <ClInclude Include="CBalanceHomeDlg.h" />
     <ClInclude Include="CContinueDlg.h" />
     <ClInclude Include="CWaitingMsgDialog.h" />
     <ClInclude Include="CWithdrawAnother0.h" />
@@ -198,6 +200,8 @@
   <ItemGroup>
     <ClCompile Include="BankingProject.cpp" />
     <ClCompile Include="BankingProjectDlg.cpp" />
+    <ClCompile Include="CBalanceDetail.cpp" />
+    <ClCompile Include="CBalanceHomeDlg.cpp" />
     <ClCompile Include="CContinueDlg.cpp" />
     <ClCompile Include="CWaitingMsgDialog.cpp" />
     <ClCompile Include="CWithdrawAnother0.cpp" />

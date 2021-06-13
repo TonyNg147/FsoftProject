@@ -44,6 +44,13 @@ public:
 	void LayoutControl();
 	CWaitingMsgDialog m_waitingMsgDlg;
 	afx_msg void OnPhulh1Waitingscr();
+	/*
+		SangTH5 editer
+	*/
+	afx_msg void OnSangth5Balancedlg();
+	/*
+		end Sang editer
+	*/
 	afx_msg void OnTrangpt24Withdraw();
 	afx_msg void OnTrangpt24Another();
 	afx_msg void OnPhulh1Continuescr();

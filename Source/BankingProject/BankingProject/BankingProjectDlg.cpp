@@ -8,7 +8,13 @@
 #include "BankingProjectDlg.h"
 #include "afxdialogex.h"
 #include "BankingDefine.h"
-
+/*
+SangTH5 include
+*/
+#include "CBalanceHomeDlg.h"
+/*
+end SangTH5 include
+*/
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -75,9 +81,19 @@ BEGIN_MESSAGE_MAP(CBankingProjectDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_QUERYDRAGICON()
 	ON_COMMAND(ID_PHULH1_WAITINGSCR, &CBankingProjectDlg::OnPhulh1Waitingscr)
+
+	/*
+	*   SangTH5 edit 10/06
+	*/
+	ON_COMMAND(ID_SANGTH5_BALANCEDLG, &CBankingProjectDlg::OnSangth5Balancedlg)
+	/*
+	*   end SangTH5 edit 10/06
+	*/
+
 	ON_COMMAND(ID_TRANGPT24_WITHDRAW, &CBankingProjectDlg::OnTrangpt24Withdraw)
 	ON_COMMAND(ID_TRANGPT24_ANOTHER, &CBankingProjectDlg::OnTrangpt24Another)
 	ON_COMMAND(ID_PHULH1_CONTINUESCR, &CBankingProjectDlg::OnPhulh1Continuescr)
+
 END_MESSAGE_MAP()
 
 
@@ -190,6 +206,19 @@ void CBankingProjectDlg::OnPhulh1Waitingscr()
 	CWaitingMsgDialog waitingDlg;
 	waitingDlg.DoModal();
 }
+
+/*
+	SangTH5 edit
+*/
+void CBankingProjectDlg::OnSangth5Balancedlg()
+{
+	// TODO: Add your command handler code here
+	CBalanceHomeDlg balanceDlg;
+	balanceDlg.DoModal();
+}
+/*
+	end SangTH5 edit
+*/
 
 void CBankingProjectDlg::OnTrangpt24Withdraw()
 {
