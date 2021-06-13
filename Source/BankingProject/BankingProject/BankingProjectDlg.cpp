@@ -76,6 +76,7 @@ BEGIN_MESSAGE_MAP(CBankingProjectDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_QUERYDRAGICON()
 	ON_COMMAND(ID_PHULH1_WAITINGSCR, &CBankingProjectDlg::OnPhulh1Waitingscr)
+	ON_COMMAND(ID_PHULH1_CONTINUESCR, &CBankingProjectDlg::OnPhulh1Continuescr)
 END_MESSAGE_MAP()
 
 
@@ -122,8 +123,7 @@ BOOL CBankingProjectDlg::OnInitDialog()
 	*/
 	m_waitingMsgDlg.Create(IDD_DIALOG_MSG_WAITING, this);
 
-	m_menu.LoadMenuW(IDR_MENU_MAIN);
-
+	m_menu.LoadMenuW(IDR_MENU_MAIN); // nhớ commit IDR_MENU_MAIN
 	SetMenu(&m_menu);
 	/*
 		End PhuLH1: 10.06
@@ -189,7 +189,6 @@ void CBankingProjectDlg::LayoutControl()
 		https://stackoverflow.com/questions/771109/how-to-move-controls-to-the-middle-of-an-mfc-form
 	*/
 
-	
 	CRect rectControl;
 	GetClientRect(&rectControl);
 	MoveWindow(rectControl.left, rectControl.top, WIDTH_APP, HEIGHT_APP);
@@ -220,4 +219,17 @@ void CBankingProjectDlg::OnPhulh1Waitingscr()
 }
 /*
 	End PhuLH1: 10.06
+*/
+
+/*
+	Begin PhuLH1: 13.06
+*/
+void CBankingProjectDlg::OnPhulh1Continuescr()
+{
+	// TODO: Add your command handler code here
+	CContinueDlg continueDlg;
+	continueDlg.DoModal();
+}
+/*
+	End PhuLH1: 13.06
 */

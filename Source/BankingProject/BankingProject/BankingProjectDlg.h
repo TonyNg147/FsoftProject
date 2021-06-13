@@ -4,6 +4,7 @@
 
 #pragma once
 #include "CWaitingMsgDialog.h"
+#include "CContinueDlg.h"
 
 
 // CBankingProjectDlg dialog
@@ -41,4 +42,5 @@ public:
 	void LayoutControl();
 	CWaitingMsgDialog m_waitingMsgDlg;
 	afx_msg void OnPhulh1Waitingscr();
+	afx_msg void OnPhulh1Continuescr();
 };
