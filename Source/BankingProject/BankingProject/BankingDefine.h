@@ -15,3 +15,7 @@
 #define HEIGHT_BUT_TEST 100
 #define X_BUT_TEST 300
 #define Y_BUT_TEST 50
+
+// TrangPT24
+#define WIDTH_BUTTON 100
+#define HEIGHT_BUTTON 50

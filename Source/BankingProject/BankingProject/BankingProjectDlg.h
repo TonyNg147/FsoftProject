@@ -4,6 +4,8 @@
 
 #pragma once
 #include "CWaitingMsgDialog.h"
+#include "CWithdrawDlg.h"
+#include "CWithdrawAnother0.h"
 #include "CContinueDlg.h"
 
 
@@ -42,5 +44,7 @@ public:
 	void LayoutControl();
 	CWaitingMsgDialog m_waitingMsgDlg;
 	afx_msg void OnPhulh1Waitingscr();
+	afx_msg void OnTrangpt24Withdraw();
+	afx_msg void OnTrangpt24Another();
 	afx_msg void OnPhulh1Continuescr();
 };

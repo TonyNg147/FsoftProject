@@ -7,7 +7,6 @@
 #include "BankingProject.h"
 #include "BankingProjectDlg.h"
 #include "afxdialogex.h"
-
 #include "BankingDefine.h"
 
 #ifdef _DEBUG
@@ -76,6 +75,8 @@ BEGIN_MESSAGE_MAP(CBankingProjectDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_QUERYDRAGICON()
 	ON_COMMAND(ID_PHULH1_WAITINGSCR, &CBankingProjectDlg::OnPhulh1Waitingscr)
+	ON_COMMAND(ID_TRANGPT24_WITHDRAW, &CBankingProjectDlg::OnTrangpt24Withdraw)
+	ON_COMMAND(ID_TRANGPT24_ANOTHER, &CBankingProjectDlg::OnTrangpt24Another)
 	ON_COMMAND(ID_PHULH1_CONTINUESCR, &CBankingProjectDlg::OnPhulh1Continuescr)
 END_MESSAGE_MAP()
 
@@ -117,17 +118,11 @@ BOOL CBankingProjectDlg::OnInitDialog()
 	
 	//Set Layout when start App
 	LayoutControl();
-
-	/*
-		Begin PhuLH1: 10.06
-	*/
+  
 	m_waitingMsgDlg.Create(IDD_DIALOG_MSG_WAITING, this);
 
 	m_menu.LoadMenuW(IDR_MENU_MAIN); // nhớ commit IDR_MENU_MAIN
 	SetMenu(&m_menu);
-	/*
-		End PhuLH1: 10.06
-	*/
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -183,53 +178,36 @@ HCURSOR CBankingProjectDlg::OnQueryDragIcon()
 
 void CBankingProjectDlg::LayoutControl()
 {
-	/*
-		PhuLH1: 
-		http://www.equestionanswers.com/vcpp/dialog-middle-of-desktop.php
-		https://stackoverflow.com/questions/771109/how-to-move-controls-to-the-middle-of-an-mfc-form
-	*/
-
 	CRect rectControl;
 	GetClientRect(&rectControl);
 	MoveWindow(rectControl.left, rectControl.top, WIDTH_APP, HEIGHT_APP);
 	m_btTest.MoveWindow(X_BUT_TEST, Y_BUT_TEST, WIDTH_BUT_TEST, HEIGHT_BUT_TEST);
-	
-	
-	/* PhuLH1: test MoveWindow by width/height (not work)
-	CRect rectControl;
-	this->GetClientRect(&rectControl);
-
-	int x = ((rectControl.right - rectControl.left) - WIDTH_APP) / 2;
-	int y = ((rectControl.bottom - rectControl.top) - HEIGHT_APP) / 2;
-
-	MoveWindow(x, y, WIDTH_APP, HEIGHT_APP);
-	m_btTest.MoveWindow(X_BUT_TEST, Y_BUT_TEST, WIDTH_BUT_TEST, HEIGHT_BUT_TEST);
-	*/
 }
 
-
-/*
-	Begin PhuLH1: 10.06
-*/
 void CBankingProjectDlg::OnPhulh1Waitingscr()
 {
 	// TODO: Add your command handler code here
 	CWaitingMsgDialog waitingDlg;
 	waitingDlg.DoModal();
 }
-/*
-	End PhuLH1: 10.06
-*/
 
-/*
-	Begin PhuLH1: 13.06
-*/
+void CBankingProjectDlg::OnTrangpt24Withdraw()
+{
+	// TODO: Add your command handler code here
+	CWithdrawDlg withdrawDlg;
+	withdrawDlg.DoModal();
+}
+
+void CBankingProjectDlg::OnTrangpt24Another()
+{
+	// TODO: Add your command handler code here
+	CWithdrawAnother0 withdrawAnotherDlg;
+	withdrawAnotherDlg.DoModal();
+}
+
 void CBankingProjectDlg::OnPhulh1Continuescr()
 {
 	// TODO: Add your command handler code here
 	CContinueDlg continueDlg;
 	continueDlg.DoModal();
 }
-/*
-	End PhuLH1: 13.06
-*/

@@ -39,6 +39,10 @@
     <ClInclude Include="CWaitingMsgDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CWithdrawDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CWithdrawAnother0.h">
     <ClInclude Include="CContinueDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -56,6 +60,10 @@
     <ClCompile Include="CWaitingMsgDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CWithdrawDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CWithdrawAnother0.cpp">
     <ClCompile Include="CContinueDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
