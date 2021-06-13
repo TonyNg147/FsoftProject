@@ -123,7 +123,7 @@ BOOL CBankingProjectDlg::OnInitDialog()
 	*/
 	m_waitingMsgDlg.Create(IDD_DIALOG_MSG_WAITING, this);
 
-	m_menu.LoadMenuW(IDR_MENU_PHULH1); // nhớ commit IDR_MENU_MAIN
+	m_menu.LoadMenuW(IDR_MENU_MAIN); // nhớ commit IDR_MENU_MAIN
 	SetMenu(&m_menu);
 	/*
 		End PhuLH1: 10.06
