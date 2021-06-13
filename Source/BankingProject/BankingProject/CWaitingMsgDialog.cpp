@@ -41,6 +41,7 @@ void CWaitingMsgDialog::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CWaitingMsgDialog, CDialogEx)
 	ON_WM_CTLCOLOR()
 	ON_WM_TIMER()
+	ON_WM_SIZE()
 END_MESSAGE_MAP()
 
 
@@ -53,8 +54,8 @@ BOOL CWaitingMsgDialog::OnInitDialog()
 	/*
 		Begin PhuLH1: 10.06
 	*/
-	// set text cho static text (thay đổi property caption)
-	m_staticText.SetWindowTextW(_T("Đang thực hiện giao dịch ...\r\nVui lòng chờ"));
+	CString strText = L"Đang thực hiện giao dịch ...\r\nVui lòng chờ";
+	m_staticText.SetWindowTextW(strText);
 	// set timer hiển thị cho dialog
 	SetTimer(ID_WAITING_DLG, WAITING_TIMER, NULL);
 	/*
@@ -100,10 +101,22 @@ void CWaitingMsgDialog::LayoutControl()
 		http://www.equestionanswers.com/vcpp/dialog-middle-of-desktop.php
 		https://stackoverflow.com/questions/771109/how-to-move-controls-to-the-middle-of-an-mfc-form
 	*/
+	// set text cho static text (thay đổi property caption)
 
 	CRect rectControl;
 	GetClientRect(&rectControl);
-	MoveWindow(rectControl.left, rectControl.top, WIDTH_APP, HEIGHT_APP);
+	MoveWindow(rectControl.left , rectControl.top, WIDTH_APP, HEIGHT_APP);
+	
+	m_staticText.MoveWindow(
+			rectControl.Width() - WIDTH_TEXT/2,
+			rectControl.Height() - HEIGHT_TEXT/2,
+			WIDTH_TEXT, 
+			HEIGHT_TEXT
+	);
+	// ?! Chưa vertical align được
+
+	//Resize
+	// dynamic scale
 }
 
 
@@ -129,3 +142,17 @@ void CWaitingMsgDialog::OnTimer(UINT_PTR nIDEvent)
 	CDialogEx::OnTimer(nIDEvent);
 }
 
+
+
+void CWaitingMsgDialog::OnSize(UINT nType, int cx, int cy)
+{
+	// scale
+	CDialogEx::OnSize(nType, cx, cy);
+
+	// TODO: Add your message handler code here
+}
+
+void CWaitingMsgDialog::changeSize()
+{
+	CWnd* dlgItem = GetDlgItem(IDC_WAITING_TEXT);
+}

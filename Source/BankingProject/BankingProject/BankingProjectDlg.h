@@ -4,6 +4,9 @@
 
 #pragma once
 #include "CWaitingMsgDialog.h"
+#include "CWithdrawDlg.h"
+#include "CWithdrawAnother0.h"
+#include "CContinueDlg.h"
 
 
 // CBankingProjectDlg dialog
@@ -48,4 +51,7 @@ public:
 	/*
 		end Sang editer
 	*/
+	afx_msg void OnTrangpt24Withdraw();
+	afx_msg void OnTrangpt24Another();
+	afx_msg void OnPhulh1Continuescr();
 };

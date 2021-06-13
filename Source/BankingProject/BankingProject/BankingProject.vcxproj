@@ -188,7 +188,10 @@
     <ClInclude Include="BankingProjectDlg.h" />
     <ClInclude Include="CBalanceDetail.h" />
     <ClInclude Include="CBalanceHomeDlg.h" />
+    <ClInclude Include="CContinueDlg.h" />
     <ClInclude Include="CWaitingMsgDialog.h" />
+    <ClInclude Include="CWithdrawAnother0.h" />
+    <ClInclude Include="CWithdrawDlg.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
@@ -199,7 +202,10 @@
     <ClCompile Include="BankingProjectDlg.cpp" />
     <ClCompile Include="CBalanceDetail.cpp" />
     <ClCompile Include="CBalanceHomeDlg.cpp" />
+    <ClCompile Include="CContinueDlg.cpp" />
     <ClCompile Include="CWaitingMsgDialog.cpp" />
+    <ClCompile Include="CWithdrawAnother0.cpp" />
+    <ClCompile Include="CWithdrawDlg.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

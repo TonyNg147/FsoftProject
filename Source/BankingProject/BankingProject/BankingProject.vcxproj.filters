@@ -43,6 +43,11 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CBalanceDetail.h">
+    <ClInclude Include="CWithdrawDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CWithdrawAnother0.h">
+    <ClInclude Include="CContinueDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -63,6 +68,11 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CBalanceDetail.cpp">
+    <ClCompile Include="CWithdrawDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CWithdrawAnother0.cpp">
+    <ClCompile Include="CContinueDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
