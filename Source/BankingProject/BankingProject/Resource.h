@@ -16,6 +16,15 @@
 
 #define IDC_BUTTON1                     1000
 #define IDC_BUTTON_TEST                 1000
+#define IDC_BUTTON_YES                  1000
+#define IDC_WAITING_TEXT                1002
+#define IDC_BUTTON2                     1004
+#define IDC_BUTTON_NO                   1004
+#define IDC_STATIC_CONTINUE_TEXT        1005
+#define ID_PHULH1                       32771
+#define PHULH1_MENULIST                 32772
+#define ID_PHULH1_WAITINGSCR            32773
+#define ID_PHULH1_CONTINUESCR           32774
 
 #define IDC_WAITING_TEXT                1001
 #define IDC_BUTTON2                     1002

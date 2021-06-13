@@ -87,6 +87,8 @@ BOOL CBankingProjectDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
+	
+
 	// Add "About..." menu item to system menu.
 
 	// IDM_ABOUTBOX must be in the system command range.
@@ -116,7 +118,7 @@ BOOL CBankingProjectDlg::OnInitDialog()
 	
 	//Set Layout when start App
 	LayoutControl();
-
+  
 	m_waitingMsgDlg.Create(IDD_DIALOG_MSG_WAITING, this);
 
 	m_menu.LoadMenuW(IDR_MENU_MAIN); // nhớ commit IDR_MENU_MAIN
