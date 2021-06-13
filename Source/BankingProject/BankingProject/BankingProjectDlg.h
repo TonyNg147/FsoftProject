@@ -3,6 +3,10 @@
 //
 
 #pragma once
+#include "CWaitingMsgDialog.h"
+#include "CWithdrawDlg.h"
+#include "CWithdrawAnother0.h"
+#include "CContinueDlg.h"
 
 
 // CBankingProjectDlg dialog
@@ -34,14 +38,13 @@ protected:
 
 private:
 	CButton m_btTest;
+	CMenu m_menu;
 
 public:
 	void LayoutControl();
-	CStatic m_ChooseMoney;
-	CButton m_FiveMillions;
-	CButton m_ThreeMillions;
-	CButton m_FiveHundreds;
-	CButton m_TwoMillions;
-	CButton m_OneMillion;
-	CButton m_Another;
+	CWaitingMsgDialog m_waitingMsgDlg;
+	afx_msg void OnPhulh1Waitingscr();
+	afx_msg void OnTrangpt24Withdraw();
+	afx_msg void OnTrangpt24Another();
+	afx_msg void OnPhulh1Continuescr();
 };
