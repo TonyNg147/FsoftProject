@@ -1,0 +1,403 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#include ""res\\BankingProject.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""      // Standard components\r\n"
+    "#if !defined(_AFXDLL)\r\n"
+    "#include ""afxribbon.rc""   // MFC ribbon and control bar resources\r\n"
+    "#endif\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\BankingProject.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About BankingProject"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "BankingProject, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2021",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_BANKINGPROJECT_DIALOG DIALOGEX 0, 0, 321, 187
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "MainDlg"
+MENU IDR_MENU_MAIN
+FONT 8, "MS Shell Dlg", 400, 0, 0xA3
+BEGIN
+    CTEXT           "TODO: Place dialog controls here.",IDC_STATIC,55,50,120,8
+    PUSHBUTTON      "Button1",IDC_BUTTON_TEST,76,21,65,23
+    PUSHBUTTON      "Cancel",IDCANCEL,109,78,65,21
+    DEFPUSHBUTTON   "OK",IDOK,61,78,39,17
+END
+
+IDD_DIALOG_MSG_WAITING DIALOGEX 0, 0, 309, 176
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "WaitingMsg"
+FONT 8, "MS Shell Dlg", 400, 0, 0xA3
+BEGIN
+    CTEXT           "Đang thực hiện giao dịch ...\r\nVui lòng chờ",IDC_WAITING_TEXT,61,59,187,57
+END
+
+IDD_DIALOG_CONTINUE DIALOGEX 0, 0, 309, 176
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ContinueDialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,198,155,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,252,155,50,14
+    LTEXT           "Static",IDC_STATIC,179,53,19,8
+    PUSHBUTTON      "Button1",IDC_BUTTON1,223,90,50,14
+    PUSHBUTTON      "Button2",IDC_BUTTON2,219,123,50,14
+END
+
+IDD_DLG_WITHDRAW DIALOGEX 0, 0, 309, 176
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "WithdrawDialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "5.000.000",IDC_VALUE_1,29,35,50,14
+    PUSHBUTTON      "3.000.000",IDC_VALUE_2,27,68,50,14
+    PUSHBUTTON      "2.000.000",IDC_VALUE_4,212,34,50,14
+    PUSHBUTTON      "1.000.000",IDC_VALUE_5,213,71,50,14
+    PUSHBUTTON      "500.000",IDC_VALUE_3,30,100,50,14
+    PUSHBUTTON      "Khác",IDC_VALUE_6,215,113,50,14
+    LTEXT           "Vui lòng lựa chọn số tiền ",IDC_VALUE_0,111,20,80,8
+END
+
+IDD_DLG_WITHDRAW_ANOTHER DIALOGEX 0, 0, 309, 176
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "WithdrawAnotherDialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Đúng",IDC_ANOTHER_YES,25,55,50,14
+    PUSHBUTTON      "Sai",IDC_ANOTHER_WRONG,218,52,50,14
+    EDITTEXT        IDC_ANOTHER_EDIT,115,54,40,14,ES_AUTOHSCROLL
+    LTEXT           "Vui lòng nhập vào số khác",IDC_ANOTHER_INPUT,108,18,84,8
+    LTEXT           "Số tiền tối đa có thể nhập là 5.000.000 và tối thiểu là 100.000",IDC_ANOTHER_MINMAX,41,37,200,8
+END
+
+IDD_DIALOG_BALANCE_HOME DIALOGEX 0, 0, 310, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BalanceHome"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Static",IDC_STATIC_BALANCE_HOME_TEXT_HEADER,130,20,40,8
+    PUSHBUTTON      "Button1",IDC_BUTTON_BALANCE_HOME_DEFAULT,21,47,50,14
+    PUSHBUTTON      "Button2",IDC_BUTTON_BALANCE_HOME_DEPOSITS,221,52,50,14
+    PUSHBUTTON      "Button3",IDC_BUTTON_BALANCE_HOME_SAVING,22,106,50,14
+    PUSHBUTTON      "Button4",IDC_BUTTON_BALANCE_HOME_CREDIT,206,100,50,14
+    PUSHBUTTON      "Button5",IDC_BUTTON_BALANCE_HOME_RETURN_CASH,214,147,50,14
+END
+
+IDD_DIALOG_BALANCE_DETAIL DIALOGEX 0, 0, 310, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BalanceDetail"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Static",IDC_STATIC_BALANCE_DETAIL_TEXT_HEADER,127,21,19,8
+    LTEXT           "Static",IDC_STATIC_BALANCE_DETAIL_MONEY_TEXT,34,52,19,8
+    LTEXT           "Static",IDC_STATIC_BALANCE_DETAIL_MONEY_VALUE,203,51,19,8
+    LTEXT           "Static",IDC_STATIC_BALANCE_DETAIL_TRANSACTION_FEE_TEXT,27,76,19,8
+    LTEXT           "Static",IDC_STATIC_BALANCE_DETAIL_TRANSACTION_FEE_VALUE,191,76,19,8
+    LTEXT           "Static",IDC_STATIC_BALANCE_DETAIL_VAT_TEXT,23,99,19,8
+    LTEXT           "Static",IDC_STATIC_BALANCE_DETAIL_VAT_VALUE,171,97,19,8
+    LTEXT           "Static",IDC_STATIC_BALANCE_DETAIL_BILL_QUESTION_TEXT,54,138,19,8
+    PUSHBUTTON      "Button1",IDC_BUTTON_BALANCE_DETAIL_BILL_QUESTION_YES,206,123,50,14
+    PUSHBUTTON      "Button2",IDC_BUTTON_BALANCE_DETAIL_BILL_QUESTION_NO,198,151,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "BankingProject"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "BankingProject.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "BankingProject.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_BANKINGPROJECT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 180
+    END
+
+    IDD_DIALOG_MSG_WAITING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_DIALOG_CONTINUE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_DLG_WITHDRAW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_DLG_WITHDRAW_ANOTHER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+     IDD_DIALOG_BALANCE_HOME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_DIALOG_BALANCE_DETAIL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_BANKINGPROJECT_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_MSG_WAITING AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_CONTINUE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DLG_WITHDRAW AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DLG_WITHDRAW_ANOTHER AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_BALANCE_HOME AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_BALANCE_DETAIL AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+
+IDR_MENU_PHULH1 MENU
+BEGIN
+    POPUP "PhuLH1"
+    BEGIN
+        MENUITEM "WaitingScr",                  ID_PHULH1_WAITINGSCR
+    END
+END
+
+IDR_MENU_TRANGPT24 MENU
+BEGIN
+    POPUP "TrangPT24"
+    BEGIN
+        MENUITEM "Withdraw",                    ID_TRANGPT24_WITHDRAW
+        MENUITEM "Another",                     ID_TRANGPT24_ANOTHER
+    END
+END
+
+IDR_MENU_SANGTH5 MENU
+BEGIN
+    POPUP "SangTH5"
+    BEGIN
+        MENUITEM "Balance",                     ID_SANGTH5_BALANCEDLG
+    END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About BankingProject..."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#include "res\BankingProject.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"      // Standard components
+#if !defined(_AFXDLL)
+#include "afxribbon.rc"   // MFC ribbon and control bar resources
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

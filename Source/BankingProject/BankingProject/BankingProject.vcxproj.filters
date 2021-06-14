@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
@@ -36,20 +36,24 @@
     <ClInclude Include="BankingDefine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+
     <ClInclude Include="CWaitingMsgDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CContinueDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+
     <ClInclude Include="CBalanceHomeDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CBalanceDetail.h">
+
     <ClInclude Include="CWithdrawDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CWithdrawAnother0.h">
-    <ClInclude Include="CContinueDlg.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BankingProject.cpp">
@@ -61,20 +65,24 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+
     <ClCompile Include="CWaitingMsgDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CContinueDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+
     <ClCompile Include="CBalanceHomeDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CBalanceDetail.cpp">
+
     <ClCompile Include="CWithdrawDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CWithdrawAnother0.cpp">
-    <ClCompile Include="CContinueDlg.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BankingProject.rc">
