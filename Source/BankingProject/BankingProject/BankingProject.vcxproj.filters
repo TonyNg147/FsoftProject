@@ -36,24 +36,24 @@
     <ClInclude Include="BankingDefine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-
     <ClInclude Include="CWaitingMsgDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CContinueDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-
     <ClInclude Include="CBalanceHomeDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CBalanceDetail.h">
-
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="CWithdrawDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CWithdrawAnother0.h">
-
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BankingProject.cpp">
@@ -65,24 +65,24 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-
     <ClCompile Include="CWaitingMsgDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CContinueDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-
     <ClCompile Include="CBalanceHomeDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CBalanceDetail.cpp">
-
+       <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="CWithdrawDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CWithdrawAnother0.cpp">
-
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BankingProject.rc">
