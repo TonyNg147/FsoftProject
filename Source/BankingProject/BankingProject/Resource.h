@@ -59,7 +59,6 @@
 #define PHULH1_MENULIST                 32772
 #define ID_PHULH1_WAITINGSCR            32773
 #define ID_PHULH1_CONTINUESCR           32774
-#define ID_TYPE1_TYPE2                  32774
 #define ID_TRANGPT24_WITHDRAW           32775
 #define IDR_MENU_TRANGPT24              32776
 #define IDD_DLG_WITHDRAW                32777
@@ -72,7 +71,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        143
-#define _APS_NEXT_COMMAND_VALUE         32775
+#define _APS_NEXT_COMMAND_VALUE         32778
 #define _APS_NEXT_CONTROL_VALUE         1016
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
