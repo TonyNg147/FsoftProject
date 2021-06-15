@@ -368,10 +368,20 @@ END
 
 IDR_MENU_MAIN MENU
 BEGIN
-    POPUP "type1"
+    POPUP "PHULH"
     BEGIN
-        MENUITEM "type2",                       ID_TYPE1_TYPE2
+        MENUITEM "Waiting",                     ID_PHULH1_WAITINGSCR
     END
+    POPUP "SANGTH5"
+    BEGIN
+        MENUITEM "Balance",                     ID_SANGTH5_BALANCEDLG
+    END
+    POPUP "TRANGPT24"
+    BEGIN
+        MENUITEM "WithDraw",                    ID_TRANGPT24_WITHDRAW
+        MENUITEM "Another",                     ID_TRANGPT24_ANOTHER
+    END
+    MENUITEM "AnhNV",                       0
 END
 
 
