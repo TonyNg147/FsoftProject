@@ -34,6 +34,7 @@
 #define IDC_ANOTHER_MINMAX              1014
 #define IDC_ANOTHER_YES                 1015
 #define IDC_ANOTHER_WRONG               1016
+#define IDC_STATIC_                     1016
 #define IDC_NEWDLG4                     1017
 #define IDC_BUTTON_YES                  1018
 #define IDC_BUTTON_NO                   1019
@@ -63,6 +64,7 @@
 #define IDR_MENU_TRANGPT24              32776
 #define IDD_DLG_WITHDRAW                32777
 #define ID_TRANGPT24_ANOTHER            32778
+#define ID_PHULH1_CONTINUESCR32778      32778
 #define ID_SANGTH5_BALANCE              32779
 #define ID_SANGTH5_BALANCEDLG           32780
 
@@ -71,8 +73,8 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        143
-#define _APS_NEXT_COMMAND_VALUE         32778
-#define _APS_NEXT_CONTROL_VALUE         1016
+#define _APS_NEXT_COMMAND_VALUE         32779
+#define _APS_NEXT_CONTROL_VALUE         1017
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

@@ -81,16 +81,44 @@ void CContinueDlg::SetText()
 
 void CContinueDlg::LayoutControl()
 {
-	CRect rectControl;
-	GetClientRect(&rectControl);
-	MoveWindow(rectControl.left, rectControl.top, WIDTH_APP, HEIGHT_APP);
+	int scrW, scrH;
+	int dlgW, dlgH;
+	int x, y;
 
-	m_ContinueText.MoveWindow(
-		rectControl.left,
-		rectControl.top,
-		WIDTH_TEXT,
-		HEIGHT_TEXT
+	CRect rect;
+	
+	// Get Screen width and height
+	scrW = GetSystemMetrics(SM_CXSCREEN);
+	scrH = GetSystemMetrics(SM_CYSCREEN);
+	
+	// Get Window rect top, left, right, bottom
+	this->GetWindowRect(&rect);
+
+	// Calculate Window width and height
+	dlgW = WIDTH_APP;
+	dlgH = HEIGHT_APP;
+
+	// Calculate Window left, top (x,y)
+	x = (scrW - dlgW) / 2;
+	y = (scrH - dlgH) / 2;
+
+	// Reposition Window left, top (x,y)
+	this->MoveWindow(x, y, dlgW, dlgH);
+
+	/*m_ContinueText.MoveWindow(
+		rc.Width() - WIDTH_TEXT / 2, rc.top + HEIGHT_TEXT / 2,
+		WIDTH_TEXT, HEIGHT_TEXT
 	);
+
+	m_btNo.MoveWindow(
+		X_BUT_NO, Y_BUT_NO,
+		W_BUTTON, H_BUTTON
+	);
+	
+	m_btYes.MoveWindow(
+		X_BUT_YES, Y_BUT_YES,
+		W_BUTTON, H_BUTTON
+	);*/
 }
 
 

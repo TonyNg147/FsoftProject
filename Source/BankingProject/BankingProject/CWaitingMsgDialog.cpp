@@ -6,6 +6,7 @@
 #include "CWaitingMsgDialog.h"
 #include "afxdialogex.h"
 #include "BankingDefine.h"
+#include <wchar.h>
 
 #define ID_WAITING_DLG 0
 #define WAITING_TIMER 3000 //3 seconds
@@ -41,7 +42,6 @@ void CWaitingMsgDialog::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CWaitingMsgDialog, CDialogEx)
 	ON_WM_CTLCOLOR()
 	ON_WM_TIMER()
-	ON_WM_SIZE()
 END_MESSAGE_MAP()
 
 
@@ -51,16 +51,8 @@ BOOL CWaitingMsgDialog::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
-	/*
-		Begin PhuLH1: 10.06
-	*/
-	CString strText = L"Đang thực hiện giao dịch ...\r\nVui lòng chờ";
-	m_staticText.SetWindowTextW(strText);
 	// set timer hiển thị cho dialog
 	SetTimer(ID_WAITING_DLG, WAITING_TIMER, NULL);
-	/*
-		End PhuLH1: 10.06
-	*/
 
 	// Add "About..." menu item to system menu.
 
@@ -89,6 +81,7 @@ BOOL CWaitingMsgDialog::OnInitDialog()
 
 	//Set Layout when start App
 	LayoutControl();
+	SetText();
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -96,23 +89,36 @@ BOOL CWaitingMsgDialog::OnInitDialog()
 
 void CWaitingMsgDialog::LayoutControl()
 {
-	/*
-		PhuLH1:
-		http://www.equestionanswers.com/vcpp/dialog-middle-of-desktop.php
-		https://stackoverflow.com/questions/771109/how-to-move-controls-to-the-middle-of-an-mfc-form
-	*/
-	// set text cho static text (thay đổi property caption)
+	int scrW, scrH;
+	int dlgW, dlgH;
+	int x, y;
 
-	CRect rectControl;
-	GetClientRect(&rectControl);
-	MoveWindow(rectControl.left , rectControl.top, WIDTH_APP, HEIGHT_APP);
-	
+	CRect rect;
+
+	// Get Screen width and height
+	scrW = GetSystemMetrics(SM_CXSCREEN);
+	scrH = GetSystemMetrics(SM_CYSCREEN);
+
+	// Get Window rect top, left, right, bottom
+	this->GetWindowRect(&rect);
+
+	// Calculate Window width and height
+	dlgW = WIDTH_APP;
+	dlgH = HEIGHT_APP;
+
+	// Calculate Window left, top (x,y)
+	x = (scrW - dlgW) / 2;
+	y = (scrH - dlgH) / 2;
+
+	// Reposition Window left, top (x,y)
+	this->MoveWindow(x, y, dlgW, dlgH);
+
+	// Move text to position (x,y)
 	m_staticText.MoveWindow(
-			rectControl.Width() - WIDTH_TEXT/2,
-			rectControl.Height() - HEIGHT_TEXT/2,
-			WIDTH_TEXT, 
-			HEIGHT_TEXT
+		(dlgW - WIDTH_TEXT) / 2, (dlgH - HEIGHT_TEXT) / 2,
+		WIDTH_TEXT, HEIGHT_TEXT
 	);
+
 	// ?! Chưa vertical align được
 
 	//Resize
@@ -142,17 +148,27 @@ void CWaitingMsgDialog::OnTimer(UINT_PTR nIDEvent)
 	CDialogEx::OnTimer(nIDEvent);
 }
 
-
-
-void CWaitingMsgDialog::OnSize(UINT nType, int cx, int cy)
+void CWaitingMsgDialog::SetText()
 {
-	// scale
-	CDialogEx::OnSize(nType, cx, cy);
-
-	// TODO: Add your message handler code here
+	CString strText = L"Đang thực hiện giao dịch ...\r\nVui lòng chờ";
+	m_staticText.SetWindowTextW(strText);
 }
 
-void CWaitingMsgDialog::changeSize()
+void CWaitingMsgDialog::SetFontSize()
 {
-	CWnd* dlgItem = GetDlgItem(IDC_WAITING_TEXT);
+	int fontHeight = 40;
+	CFont *font = new CFont();
+	LOGFONT logfont;
+	memset(&logfont, 0, sizeof(LOGFONT));		// Clear out structure.
+	logfont.lfHeight = fontHeight;				// Request a 20-pixel-high font
+	
+#pragma warning(suppress : 4996)
+	wcscpy(logfont.lfFaceName, L"Arial");	// with face name "Arial".
+	
+	font->CreateFontIndirect(&logfont);			// Create the font.
+
+	CWnd *m_staticText = GetDlgItem(IDC_WAITING_TEXT);
+	if (m_staticText != NULL)
+		m_staticText->SetFont(font);
 }
+

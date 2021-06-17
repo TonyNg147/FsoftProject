@@ -92,8 +92,8 @@ BEGIN_MESSAGE_MAP(CBankingProjectDlg, CDialogEx)
 
 	ON_COMMAND(ID_TRANGPT24_WITHDRAW, &CBankingProjectDlg::OnTrangpt24Withdraw)
 	ON_COMMAND(ID_TRANGPT24_ANOTHER, &CBankingProjectDlg::OnTrangpt24Another)
-	ON_COMMAND(ID_PHULH1_CONTINUESCR, &CBankingProjectDlg::OnPhulh1Continuescr)
 
+	ON_COMMAND(ID_PHULH1_CONTINUESCR, &CBankingProjectDlg::OnPhulh1Continuescr)
 END_MESSAGE_MAP()
 
 
@@ -137,7 +137,7 @@ BOOL CBankingProjectDlg::OnInitDialog()
   
 	m_waitingMsgDlg.Create(IDD_DIALOG_MSG_WAITING, this);
 
-	m_menu.LoadMenuW(IDR_MENU_MAIN); // nhớ commit IDR_MENU_MAIN
+	m_menu.LoadMenuW(IDR_MENU_PHULH1); // nhớ commit IDR_MENU_MAIN
 	SetMenu(&m_menu);
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
