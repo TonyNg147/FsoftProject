@@ -113,5 +113,5 @@
   */
   
 // TrangPT24
-#define WIDTH_BUTTON 100
+#define WIDTH_BUTTON 400
 #define HEIGHT_BUTTON 50

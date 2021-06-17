@@ -1,4 +1,4 @@
-// CWithdrawDlg.cpp : implementation file
+﻿// CWithdrawDlg.cpp : implementation file
 //
 
 #include "pch.h"
@@ -76,11 +76,15 @@ void CWithdrawDlg::LayoutControl() // Change button size
 {
 	CRect rect;
 	GetClientRect(&rect);
-	MoveWindow(rect.left, rect.top, 550, 450);
+
+	MoveWindow(rect.left, rect.top, 1024, 768);
 	m_FiveMillions.MoveWindow(50, 100, WIDTH_BUTTON, HEIGHT_BUTTON);
 	m_ThreeMillions.MoveWindow(50, 150, WIDTH_BUTTON, HEIGHT_BUTTON);
 	m_FiveHundreds.MoveWindow(50, 200, WIDTH_BUTTON, HEIGHT_BUTTON);
-	m_TwoMillions.MoveWindow(300, 100, WIDTH_BUTTON, HEIGHT_BUTTON);
-	m_OneMillions.MoveWindow(300, 150, WIDTH_BUTTON, HEIGHT_BUTTON);
-	m_Another.MoveWindow(300, 200, WIDTH_BUTTON, HEIGHT_BUTTON);
+	m_TwoMillions.MoveWindow(500, 100, WIDTH_BUTTON, HEIGHT_BUTTON);
+	m_OneMillions.MoveWindow(500, 150, WIDTH_BUTTON, HEIGHT_BUTTON);
+	m_Another.MoveWindow(500, 200, WIDTH_BUTTON, HEIGHT_BUTTON);
+
+	m_InputMoney.SetWindowTextW(L"Vui lòng chọn số tiền");
+	m_Another.SetWindowTextW(L"Khác");
 }

@@ -1,4 +1,4 @@
-// CWithdrawAnother0.cpp : implementation file
+﻿// CWithdrawAnother0.cpp : implementation file
 //
 
 #include "pch.h"
@@ -70,9 +70,16 @@ void CWithdrawAnother0::LayoutControl() // Change button size
 {
 	CRect rect;
 	GetClientRect(&rect);
-	MoveWindow(rect.left, rect.top, 550, 450);
-	m_Yes.MoveWindow(50, 100, WIDTH_BUTTON, HEIGHT_BUTTON);
-	m_Wrong.MoveWindow(50, 150, WIDTH_BUTTON, HEIGHT_BUTTON);
+	MoveWindow(rect.left, rect.top, 1024, 768);
+
+	m_Yes.MoveWindow(50, 150, WIDTH_BUTTON, HEIGHT_BUTTON);
+	m_EditMoney.MoveWindow(50, 100, WIDTH_BUTTON, HEIGHT_BUTTON);
+	m_Wrong.MoveWindow(50, 200, WIDTH_BUTTON, HEIGHT_BUTTON);
+	m_InputMoney.SetWindowTextW(L"Vui lòng nhập vào số tiền bạn muốn rút");
+	m_MinMaxMoney.SetWindowTextW(L"Số tiền tối đa có thể nhập là 5.000.000 và tối thiểu là 100.000");
+	m_Yes.SetWindowTextW(L"Đúng");
+	m_Wrong.SetWindowTextW(L"Sai");
+
 }
 
 // CWithdrawAnother0 message handlers
