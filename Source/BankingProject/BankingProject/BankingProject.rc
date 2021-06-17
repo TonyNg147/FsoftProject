@@ -381,7 +381,6 @@ BEGIN
         MENUITEM "WithDraw",                    ID_TRANGPT24_WITHDRAW
         MENUITEM "Another",                     ID_TRANGPT24_ANOTHER
     END
-    MENUITEM "AnhNV",                       0
 END
 
 
