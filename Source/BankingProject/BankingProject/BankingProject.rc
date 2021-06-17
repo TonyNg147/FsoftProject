@@ -370,6 +370,7 @@ BEGIN
     POPUP "PHULH"
     BEGIN
         MENUITEM "Waiting",                     ID_PHULH1_WAITINGSCR
+        MENUITEM "Continue",                    ID_PHULH1_CONTINUESCR
     END
     POPUP "SANGTH5"
     BEGIN
@@ -380,7 +381,6 @@ BEGIN
         MENUITEM "WithDraw",                    ID_TRANGPT24_WITHDRAW
         MENUITEM "Another",                     ID_TRANGPT24_ANOTHER
     END
-    MENUITEM "AnhNV",                       0
 END
 
 

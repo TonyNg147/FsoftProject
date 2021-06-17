@@ -80,7 +80,7 @@ void CBankingProjectDlg::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CBankingProjectDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_QUERYDRAGICON()
-	ON_COMMAND(ID_PHULH1_WAITINGSCR, &CBankingProjectDlg::OnPhulh1Waitingscr)
+	ON_COMMAND(ID_PHULH1_WAITINGSCR, &CBankingProjectDlg::OnPhulh1WaitingscMain)
 
 	/*
 	*   SangTH5 edit 10/06
@@ -137,7 +137,7 @@ BOOL CBankingProjectDlg::OnInitDialog()
   
 	m_waitingMsgDlg.Create(IDD_DIALOG_MSG_WAITING, this);
 
-	m_menu.LoadMenuW(IDR_MENU_PHULH1); // nhớ commit IDR_MENU_MAIN
+	m_menu.LoadMenuW(IDR_MENU_MAIN); // nhớ commit IDR_MENU_MAIN
 	SetMenu(&m_menu);
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
@@ -200,7 +200,7 @@ void CBankingProjectDlg::LayoutControl()
 	m_btTest.MoveWindow(X_BUT_TEST, Y_BUT_TEST, WIDTH_BUT_TEST, HEIGHT_BUT_TEST);
 }
 
-void CBankingProjectDlg::OnPhulh1Waitingscr()
+void CBankingProjectDlg::OnPhulh1WaitingscMain()
 {
 	// TODO: Add your command handler code here
 	CWaitingMsgDialog waitingDlg;
