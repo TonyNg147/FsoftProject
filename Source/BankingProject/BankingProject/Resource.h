@@ -6,6 +6,7 @@
 #define IDD_ABOUTBOX                    100
 #define IDS_ABOUTBOX                    101
 #define IDD_BANKINGPROJECT_DIALOG       102
+#define IDD_DIALOG_MAIN                 103
 #define IDR_MAINFRAME                   128
 #define IDD_DIALOG_MSG_WAITING          130
 #define IDR_MENU_PHULH1                 131
@@ -17,6 +18,7 @@
 #define IDD_DIALOG_BALANCE_DETAIL       135
 #define IDR_MENU_SANGTH5                136
 #define IDD_DLG_WITHDRAW_ANOTHER        137
+#define IDD_DIALOG2                     143
 #define IDC_BUTTON1                     1000
 #define IDC_BUTTON_TEST                 1000
 #define IDC_BUTTON2                     1002
@@ -64,17 +66,19 @@
 #define IDR_MENU_TRANGPT24              32776
 #define IDD_DLG_WITHDRAW                32777
 #define ID_TRANGPT24_ANOTHER            32778
+#define ID_PHULH1_CONTINUESCR32778      32778
 #define ID_SANGTH5_BALANCE              32779
 #define ID_NGUYENTDT                    32779
 #define ID_SANGTH5_BALANCEDLG           32780
+#define ID_PHULH1_MAINSCR               32782
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        143
-#define _APS_NEXT_COMMAND_VALUE         32780
+#define _APS_NEXT_RESOURCE_VALUE        145
+#define _APS_NEXT_COMMAND_VALUE         32783
 #define _APS_NEXT_CONTROL_VALUE         1016
-#define _APS_NEXT_SYMED_VALUE           101
+#define _APS_NEXT_SYMED_VALUE           104
 #endif
 #endif

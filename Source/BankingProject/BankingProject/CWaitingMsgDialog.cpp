@@ -148,22 +148,19 @@ void CWaitingMsgDialog::OnTimer(UINT_PTR nIDEvent)
 	CDialogEx::OnTimer(nIDEvent);
 }
 
-void CWaitingMsgDialog::SetText()
-{
-	CString strText = L"Đang thực hiện giao dịch ...\r\nVui lòng chờ";
-	m_staticText.SetWindowTextW(strText);
-}
-
 void CWaitingMsgDialog::SetFontSize()
 {
+	// test lan 1 (work)
 	int fontHeight = 40;
+	const wchar_t *fontName = L"Roboto";
+
 	CFont *font = new CFont();
 	LOGFONT logfont;
 	memset(&logfont, 0, sizeof(LOGFONT));		// Clear out structure.
 	logfont.lfHeight = fontHeight;				// Request a 20-pixel-high font
 	
 #pragma warning(suppress : 4996)
-	wcscpy(logfont.lfFaceName, L"Arial");	// with face name "Arial".
+	wcscpy(logfont.lfFaceName, fontName);		// with font face name.
 	
 	font->CreateFontIndirect(&logfont);			// Create the font.
 
@@ -172,3 +169,9 @@ void CWaitingMsgDialog::SetFontSize()
 		m_staticText->SetFont(font);
 }
 
+void CWaitingMsgDialog::SetText()
+{
+	CString strText = L"Đang thực hiện giao dịch ...\r\nVui lòng chờ";
+	m_staticText.SetWindowTextW(strText);
+	SetFontSize();
+}

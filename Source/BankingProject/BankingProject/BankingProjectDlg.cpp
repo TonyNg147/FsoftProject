@@ -94,6 +94,7 @@ BEGIN_MESSAGE_MAP(CBankingProjectDlg, CDialogEx)
 	ON_COMMAND(ID_TRANGPT24_ANOTHER, &CBankingProjectDlg::OnTrangpt24Another)
 
 	ON_COMMAND(ID_PHULH1_CONTINUESCR, &CBankingProjectDlg::OnPhulh1Continuescr)
+	ON_COMMAND(ID_PHULH1_MAINSCR, &CBankingProjectDlg::OnPhulh1Mainscr)
 END_MESSAGE_MAP()
 
 
@@ -239,4 +240,12 @@ void CBankingProjectDlg::OnPhulh1Continuescr()
 	// TODO: Add your command handler code here
 	CContinueDlg continueDlg;
 	continueDlg.DoModal();
+}
+
+
+void CBankingProjectDlg::OnPhulh1Mainscr()
+{
+	// TODO: Add your command handler code here
+	CMainDlg mainDlg;
+	mainDlg.DoModal();
 }

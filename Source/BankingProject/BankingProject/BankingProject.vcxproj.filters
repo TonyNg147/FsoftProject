@@ -54,6 +54,9 @@
     <ClInclude Include="CWithdrawAnother0.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CMainDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BankingProject.cpp">
@@ -75,12 +78,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CBalanceDetail.cpp">
-       <Filter>Source Files</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CWithdrawDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CWithdrawAnother0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CMainDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -7,6 +7,7 @@
 #include "CWithdrawDlg.h"
 #include "CWithdrawAnother0.h"
 #include "CContinueDlg.h"
+#include "CMainDlg.h"
 
 
 // CBankingProjectDlg dialog
@@ -55,4 +56,5 @@ public:
 	afx_msg void OnTrangpt24Withdraw();
 	afx_msg void OnTrangpt24Another();
 	afx_msg void OnPhulh1Continuescr();
+	afx_msg void OnPhulh1Mainscr();
 };

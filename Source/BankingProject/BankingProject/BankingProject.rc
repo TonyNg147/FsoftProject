@@ -178,6 +178,13 @@ BEGIN
     PUSHBUTTON      "Button2",IDC_BUTTON_BALANCE_DETAIL_BILL_QUESTION_NO,198,151,50,14
 END
 
+IDD_DIALOG_MAIN DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MainScr"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -289,6 +296,14 @@ BEGIN
         TOPMARGIN, 7
         BOTTOMMARGIN, 170
     END
+
+    IDD_DIALOG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
 END
 #endif    // APSTUDIO_INVOKED
 
@@ -333,6 +348,11 @@ BEGIN
     0
 END
 
+IDD_DIALOG_MAIN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -371,6 +391,7 @@ BEGIN
     BEGIN
         MENUITEM "Waiting",                     ID_PHULH1_WAITINGSCR
         MENUITEM "Continue",                    ID_PHULH1_CONTINUESCR
+        MENUITEM "Main",                        ID_PHULH1_MAINSCR
     END
     POPUP "SANGTH5"
     BEGIN
