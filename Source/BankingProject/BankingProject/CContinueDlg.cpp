@@ -67,6 +67,42 @@ BOOL CContinueDlg::OnInitDialog()
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
+void CContinueDlg::SetFontSize()
+{
+	// test lan 1 (work)
+	int text_fontHeight = 40;
+	int button_fontHeight = 35;
+
+	const wchar_t *fontName = L"Roboto";
+
+	CFont *text_font = new CFont();
+	CFont *button_font = new CFont();
+	LOGFONT text_logfont;
+	LOGFONT button_logfont;
+	memset(&text_logfont, 0, sizeof(LOGFONT));			// Clear out structure.
+	memset(&button_logfont, 0, sizeof(LOGFONT));		// Clear out structure.
+	text_logfont.lfHeight = text_fontHeight;			// Request a 20-pixel-high font
+	button_logfont.lfHeight = button_fontHeight;		// Request a 20-pixel-high font
+
+#pragma warning(suppress : 4996)
+	wcscpy(text_logfont.lfFaceName, fontName);			// with font face name.
+#pragma warning(suppress : 4996)
+	wcscpy(button_logfont.lfFaceName, fontName);		// with font face name.
+
+	text_font->CreateFontIndirect(&text_logfont);		// Create the font.
+	button_font->CreateFontIndirect(&button_logfont);	// Create the font.
+
+	CWnd *m_ContinueText = GetDlgItem(IDC_STATIC_CONTINUE_TEXT);
+	CWnd *m_btYes = GetDlgItem(IDC_BUTTON_YES);
+	CWnd *m_btNo = GetDlgItem(IDC_BUTTON_NO);
+	if (m_ContinueText != NULL || m_btYes != NULL || m_btNo != NULL)
+	{
+		m_ContinueText->SetFont(text_font);
+		m_btYes->SetFont(button_font);
+		m_btNo->SetFont(button_font);
+	}
+}
+
 void CContinueDlg::SetText()
 {
 	CString strContinueText = L"Quý khách có muốn thực hiện giao dịch khác?";
@@ -77,6 +113,8 @@ void CContinueDlg::SetText()
 
 	CString strNo = L"Không";
 	m_btNo.SetWindowTextW(strNo);
+
+	SetFontSize();
 }
 
 void CContinueDlg::LayoutControl()
@@ -105,8 +143,8 @@ void CContinueDlg::LayoutControl()
 	// Reposition Window left, top (x,y)
 	this->MoveWindow(x, y, dlgW, dlgH);
 
-	/*m_ContinueText.MoveWindow(
-		rc.Width() - WIDTH_TEXT / 2, rc.top + HEIGHT_TEXT / 2,
+	m_ContinueText.MoveWindow(
+		(dlgW - WIDTH_TEXT) / 2, rect.top + (HEIGHT_TEXT / 2),
 		WIDTH_TEXT, HEIGHT_TEXT
 	);
 
@@ -118,7 +156,7 @@ void CContinueDlg::LayoutControl()
 	m_btYes.MoveWindow(
 		X_BUT_YES, Y_BUT_YES,
 		W_BUTTON, H_BUTTON
-	);*/
+	);
 }
 
 
@@ -142,3 +180,4 @@ HBRUSH CContinueDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 	// TODO:  Return a different brush if the default is not desired
 	return hbr;
 }
+

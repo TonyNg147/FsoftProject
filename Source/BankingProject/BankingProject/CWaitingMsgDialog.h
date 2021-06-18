@@ -20,8 +20,9 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 
 	DECLARE_MESSAGE_MAP()
-public:
+
 	CStatic m_staticText;
+public:
 	BOOL OnInitDialog();
 	void LayoutControl();
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
