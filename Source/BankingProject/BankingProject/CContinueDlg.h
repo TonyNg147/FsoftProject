@@ -27,6 +27,7 @@ protected:
 public:
 	BOOL OnInitDialog();
 	void LayoutControl();
+	void SetFontSize();
 	void SetText();
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 };

@@ -4,9 +4,34 @@
 #define WIDTH_APP 1024
 #define HEIGHT_APP 768
 
-//Define Information for Static text in IDD_DIALOG_MSG_WAITING & IDD_DIALOG_CONTINUE
-#define WIDTH_TEXT 1024
-#define HEIGHT_TEXT 200
+//Define Information for Static text in 
+// IDD_DIALOG_MSG_WAITING
+// IDD_DIALOG_CONTINUE
+// IDD_DIALOG_MAIN
+#define WIDTH_TEXT		1024
+#define HEIGHT_TEXT		100
+
+#define W_BUTTON		250
+#define H_BUTTON		100
+
+#define X_BUT_NO		(1008 - W_BUTTON)
+#define Y_BUT_NO		(759 - H_BUTTON - 30)
+
+#define X_BUT_YES		(1008 - W_BUTTON)
+#define Y_BUT_YES		(759 - H_BUTTON - 30 - 150)
+
+#define X_BUT_MAIN_WITHDRAW			0
+#define Y_BUT_MAIN_WITHDRAW			(759 - H_BUTTON - 30 - 400)
+
+#define X_BUT_MAIN_BALANCE			0
+#define Y_BUT_MAIN_BALANCE			(759 - H_BUTTON - 30 - 200)
+
+#define X_BUT_MAIN_CHANGE_PIN		(1008 - W_BUTTON)
+#define Y_BUT_MAIN_CHANGE_PIN		(759 - H_BUTTON - 30 - 400)
+
+#define X_BUT_MAIN_TRANSFER_MONEY	(1008 - W_BUTTON)
+#define Y_BUT_MAIN_TRANSFER_MONEY	(759 - H_BUTTON - 30 - 200)
+
 
 
 
